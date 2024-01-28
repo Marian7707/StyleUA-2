@@ -1,17 +1,13 @@
+// src/components/Header.js
 import React from 'react';
-import header from './components/header';
-import ReactDOM from 'react-dom';
-import Model from './components/Modal';
-// ... імпорт інших компонентів ...
 
-const App = () => {
+const Header = () => {
   return (
-    <div className="App">
-      <header>
+    <header>
       <div className="header-container">
         <div className="header-top">
           <a href="/">
-            <img src="\logo.png" alt="Style UA Logo" className="logo" />
+            <img src="./img/logo.png" alt="Style UA Logo" className="logo" />
           </a>
           <h1 className="title">National clothes of UKRAINE</h1>
         </div>
@@ -65,9 +61,7 @@ const App = () => {
         </button>
       </div>
     </header>
-    </div>
   );
 };
 
-export default App;
-
+export default Header;

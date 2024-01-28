@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Style UA</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="App.js" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Boogaloo&family=IBM+Plex+Mono:ital,wght@1,300&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="header-top">
+          <a href="/">
+            <img src="./img/logo.png" alt="Style UA Logo" class="logo" />
+          </a>
+          <h1 class="title">National clothes of UKRAINE</h1>
+        </div>
+        <div class="user-controls">
+          <!-- Модальне вікно для форми реєстрації -->
+          <div id="registration-modal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <form id="registration-form">
+                <h2>Sing in</h2>
+                <!-- Поля форми -->
+                <input
+                  type="text"
+                  placeholder="First name"
+                  name="first_name"
+                  required
+                />
+                <input type="email" placeholder="Email" name="email" required />
+                <input
+                  type="password"
+                  placeholder="Password"
+                  name="password"
+                  required
+                />
+                <button class="register" type="submit">Sing in</button>
+              </form>
+            </div>
+          </div>
+
+          <button class="account-btn" aria-label="Account">
+            <img class="account" src="./img/user-solid.svg" alt="" />
+          </button>
+          <button class="cart-btn" aria-label="Cart">
+            <img src="./img/cart-shopping-solid.svg" alt="" />
+          </button>
+          <button class="hamburger-btn" id="hamburger">
+            <img src="./img/bars-solid.svg" alt="" />
+          </button>
+          <div class="sidebar" id="sidebar">
+            <ul>
+              <li><a href="#men">MEN</a></li>
+              <li><a href="#women">WOMEN</a></li>
+              <li><a href="#accessories">ACCESSORIES</a></li>
+              <li><a href="#accessories">DELIVERY</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="search-container">
+        <input type="search" placeholder="Search" aria-label="Search" />
+        <button class="search-btn" aria-label="Search">
+          <img src="./img/search.svg" alt="" />
+        </button>
+      </div>
+    </header>
+
+    <!-- Main content here -->
+
+    <script src="app.js"></script>
+  </body>
+</html>

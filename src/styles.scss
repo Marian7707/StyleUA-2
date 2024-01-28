@@ -1,0 +1,203 @@
+* {
+  box-sizing: border-box;
+}
+$primary-color: #0072ff;
+$mobile-width: 430px;
+
+body {
+
+}
+
+header {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+  .header-container {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+.header-top {
+  position: relative;
+  justify-content: space-around;
+  display: flex;
+  h1{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    height: 85px;
+color: #74C0FC;
+font-family: Pacifico;
+font-size: 29px;
+font-style: normal;
+font-weight: 900;
+line-height: normal;
+  }
+  
+}
+    .hamburger-btn {
+      position: relative;
+      z-index: 2;
+      font-size: 24px;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+    .logo {
+      height: 163px; // Adjust this value as needed
+    }
+
+    .user-controls {
+      gap: 10px;
+      bottom: 50px;
+      right: 15px;
+      position: relative;
+      display: flex;
+      font-size: 24px;
+    /* Стилі для модального вікна */
+.modal {
+  display: none; /* Приховано за замовчуванням */
+  position: fixed;
+  z-index: 1001;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4); /* Півпрозорий фон */
+
+  .modal-content {
+    border-radius: 20px;
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 450px; /* Максимальна ширина модального вікна */
+  }
+
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: #74C0FC;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  /* Стилі для форми */
+  #registration-form {
+    color: #74C0FC;
+    // додайте стилі для форми за бажанням
+  }
+}
+.register {
+  padding: 5px;
+  border-radius: 10px;
+  background-color: #74C0FC;
+}
+      button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        margin-left: 10px;
+        transition: all 0.3s ease;
+    
+        &:hover {
+          border-radius: 20px;
+          transform: translateY(-5px); // Піднімає кнопку вгору на 5 пікселів
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); // Додає тінь під кнопку
+        }
+    
+        .account {
+          width: 32px; // Припускаючи, що .account - це клас для специфічної кнопки
+        }
+    
+        img {
+          width: 40px; // Припускаючи, що img - це всередині кнопки
+        }
+      }
+    }
+  }
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px; // Початкове положення за межами екрану
+    width: 250px; // Встановіть ширину бічної панелі
+    height: 50%;
+    background: white;
+    transition: right 0.3s ease;
+    z-index: 1000; // Забезпечує, що панель знаходиться над іншими елементами
+  
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+  
+      li a {
+        display: block;
+        padding: 15px 20px;
+        text-decoration: none;
+        color: rgba(116, 192, 252, 1); // Ваш колір тексту
+        border-bottom: 1px solid #ccc; // Опціонально, для розділення пунктів меню
+  
+        &:hover {
+          background-color: #f8f8f8; // Опціонально, для ефекту при наведенні
+        }
+      }
+    }
+  }
+  
+  // Клас .active для відображення меню
+  .sidebar.active {
+    right: 0; // Переміщує панель у видиму область
+  }
+  .search-container {
+    width: 80%;
+    left: 20px;
+    bottom: 40px;
+    position: relative;
+    display: flex;
+    margin: auto;
+    
+    
+    input[type="search"] {
+      flex-grow: 1;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 20px 0 0 20px;
+      outline: none;
+    }
+
+    .search-btn {
+      padding: 10px;
+      border: none;
+      background-color: $primary-color;
+      color: white;
+      border-radius: 0 20px 20px 0;
+      cursor: pointer;
+    }
+    img {
+      width: 15px;
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  header {
+    .header-container {
+      padding: 10px;
+    }
+
+    .search-container {
+      margin: 10px;
+    }
+  }
+}
